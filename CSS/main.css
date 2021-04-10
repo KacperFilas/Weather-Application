@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-weight: 100;
+}
+html {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgb(52, 70, 97) 0%,
+    rgb(127, 167, 253) 100%
+  );
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-repeat: no-repeat;
+  font-size: 27px;
+}
+
+a:link,
+a:active,
+a:visited,
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+#main_container {
+  border-radius: 10px;
+  margin: auto;
+  overflow: hidden;
+  min-height: 600px;
+  max-height: 600px;
+  min-width: 770px;
+  max-width: 770px;
+}
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* Video CONTAINER */
+/*//////////////////////////////////////////////////////////////////////////////////////*/
+.container__video {
+  width: 100%;
+  height: 50%;
+  margin: auto;
+  position: relative;
+  display: flex;
+}
+
+#absolute {
+  margin-left: 10px;
+  font-size: 78%;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+
+  display: flex;
+  flex-flow: column;
+  z-index: 5;
+}
+
+.container__video-video {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  animation-duration: 1s;
+  animation-name: fadeout;
+}
+
+.start {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.active {
+  visibility: visible;
+  opacity: 1;
+  animation-duration: 1s;
+  animation-name: fadein;
+}
+
+.main_active {
+  visibility: visible;
+  opacity: 1;
+  animation-duration: 2s;
+  animation-name: fadein;
+}
+
+.container__video-video-cars {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+
+.weather__main-icon {
+  width: 40px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.main_text {
+  margin-top: 5px;
+}
+#Rain {
+  filter: contrast(100%);
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* WHEATER CONTAINER */
+/*//////////////////////////////////////////////////////////////////////////////////////*/
+.container__weather {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.weather__window {
+  /* visibility: visible; */
+  height: 250px;
+  width: 150px;
+  min-width: 150px;
+  display: flex;
+  font-size: 85%;
+  color: white;
+  border-radius: 10px;
+  background-color: rgb(39, 150, 144);
+}
+
+.weather__window:hover {
+  background-color: rgba(81, 187, 182, 0.774);
+}
+
+.weather__window:active {
+  background-color: rgb(22, 182, 134);
+}
+
+.weather__window.selected {
+  background-color: rgb(22, 182, 134);
+}
+
+.weather__info-container {
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+}
+
+.weather__info-icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  width: 50%;
+}
+.weather__info-temp {
+  font-size: 125%;
+  letter-spacing: -1px;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* Searchbar */
+/*//////////////////////////////////////////////////////////////////////////////////////*/
+.container__searchbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.container__searchbar input {
+  font-size: 20px;
+  border: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  min-width: 500px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  height: 110%;
+  border-radius: 5px;
+  background-color: rgb(39, 150, 144);
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.548);
+}
+
+.container__searchbar input:hover {
+  outline-style: none;
+  border: none;
+  box-shadow: none;
+  background-color: rgba(81, 187, 182, 0.774);
+}
+
+.container__searchbar input:focus {
+  outline-style: none;
+  border: none;
+  box-shadow: none;
+  background-color: rgb(22, 182, 134);
+}
+
+/* BottomText */
+
+#copyright {
+  font-size: 15px;
+  color: black;
+}
+
+#copyright a {
+  color: rgb(39, 150, 144);
+}
+
+#copyright a:hover {
+  color: rgba(101, 196, 191, 0.89);
+}
+
+#copyright a:active {
+  color: rgb(22, 182, 134);
+}
+
+@keyframes fadeout {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  1% {
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}

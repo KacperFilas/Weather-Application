@@ -1,0 +1,30 @@
+{
+  "name": "weatherap",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "author": "Kacper Filas",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "babel-install": "^2.1.0",
+    "copy-webpack-plugin": "^8.1.1",
+    "faker": "^5.5.3",
+    "git-all": "^0.0.3",
+    "live-server": "^1.2.1",
+    "parcel": "^2.0.0-beta.1",
+    "parcel-plugin-static-files-copy": "^2.6.0"
+  },
+  "devDependencies": {
+    "file-loader": "^6.2.0",
+    "package": "^1.0.1",
+    "parcel-reporter-static-files-copy": "^1.2.1",
+    "url-loader": "^4.1.1"
+  },
+  "staticFiles": {
+    "staticPath": "img",
+    "distDir": "img"
+  }
+}
