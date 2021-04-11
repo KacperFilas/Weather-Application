@@ -84,15 +84,21 @@ const GetNewCoords = async function (input) {
   }
 };
 
-const img = new Image();
-img.onload = function () {
+// const img = new Image();
+// img.onload = function () {
+//   SearchBarView.addDoOnClick(GetNewCoords);
+
+//   GetWeatherOnInit();
+// };
+
+// img.src = "../gifs/rain.gif";
+
+window.onload = function (event) {
+  console.log(event);
   SearchBarView.addDoOnClick(GetNewCoords);
 
   GetWeatherOnInit();
 };
-
-img.src = "../gifs/rain.gif";
-
 // SearchBarView.addDoOnClick(GetNewCoords);
 
 // GetWeatherOnInit();
