@@ -17,21 +17,6 @@ class SearchBarView extends View {
       }
     });
   }
-
-  // addGetInputOnClick() {
-  //   this._Element.addEventListener("keyup", function (e) {
-  //     let data;
-  //     if (e.keyCode === 13) {
-  //       console.log(1);
-  //       e.preventDefault();
-
-  //       data = this.value;
-  //       this.value = "";
-
-  //       return data;
-  //     }
-  //   });
-  // }
 }
 
 export default new SearchBarView();

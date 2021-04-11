@@ -231,14 +231,10 @@ class MainWeatherView extends View {
 
   showEverything() {
     document.getElementById("main_container").classList.add("main_active");
-    document.querySelector(".loadingio-spinner-dual-ring-r1sfx2fv9kp")
-      .parentElement;
 
-    console.log(
-      document
-        .querySelector(".loadingio-spinner-dual-ring-r1sfx2fv9kp")
-        .parentElement.firstElementChild.remove()
-    );
+    document
+      .querySelector(".loadingio-spinner-dual-ring-r1sfx2fv9kp")
+      .parentElement.firstElementChild.remove();
   }
 
   generateMarkup() {

@@ -93,7 +93,6 @@ export const getCoordsFromInput = async function (input) {
     );
 
     const data = await res.json();
-    console.log(data);
 
     const locationName = function () {
       if (data.results[0].components.hasOwnProperty("city")) {

@@ -6,13 +6,11 @@ import * as model from "./model.js";
 import View from "./views/View.js";
 
 const GetWeatherOnInit = async function () {
-  ViewWeather.renderSpinner();
+  // ViewWeather.renderSpinner();
   try {
     // Get Coordinates form geolocation
 
     await model.getCoordsFromGeo();
-
-    console.log(model.state);
 
     if (model.state.allow === false) {
       GetNewCoords("Warsaw");
@@ -34,7 +32,6 @@ const GetWeatherOnInit = async function () {
       model.state.coords.long
     );
 
-    console.log(1);
     // Save weather info from model into a variable
     const state = model.state;
 
@@ -50,7 +47,7 @@ const GetWeatherOnInit = async function () {
       MainWeatherView.changeClasses
     );
 
-    setTimeout(MainWeatherView.showEverything, 300);
+    setTimeout(MainWeatherView.showEverything, 800);
   } catch (err) {
     console.error(err);
   }
@@ -70,7 +67,7 @@ const GetNewCoords = async function (input) {
     // Save weather info from model into a variable
     const state = model.state;
     ViewWeather.render(state);
-    console.log(state);
+
     //Overwrite number of the selected day back to 0 so on load it shows today (day number 1)
     MainWeatherView.dayNumber = 0;
     // Render Main weather info on load of the location
@@ -87,13 +84,17 @@ const GetNewCoords = async function (input) {
   }
 };
 
-// const GetNewCoords = function () {
-//   const input = SearchBarView.addSubmitHandler();
-//   console.log(input);
-//   model.getCoordsFromInput(input);
-// };
+const img = new Image();
+img.onload = function () {
+  SearchBarView.addDoOnClick(GetNewCoords);
 
-SearchBarView.addDoOnClick(GetNewCoords);
+  GetWeatherOnInit();
+};
 
-// SearchBarView.addDoOnClick(model.getCoordsFromInput);
-GetWeatherOnInit();
+img.src = "../gifs/rain.gif";
+
+// SearchBarView.addDoOnClick(GetNewCoords);
+
+// GetWeatherOnInit();
+
+//the event occurred
