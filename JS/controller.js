@@ -3,8 +3,10 @@ import SearchBarView from "./views/SearchBarView.js";
 import MainWeatherView from "./views/MainWeatherView.js";
 
 import * as model from "./model.js";
+import View from "./views/View.js";
 
 const GetWeatherOnInit = async function () {
+  ViewWeather.renderSpinner();
   try {
     // Get Coordinates form geolocation
 
