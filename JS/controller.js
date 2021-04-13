@@ -91,14 +91,20 @@ const GetNewCoords = async function (input) {
 //   GetWeatherOnInit();
 // };
 
-// img.src = "../gifs/rain.gif";
-
-window.onload = function (event) {
-  console.log(event);
+const Init = function () {
   SearchBarView.addDoOnClick(GetNewCoords);
-
   GetWeatherOnInit();
 };
+
+if (document.readyState !== "loading") {
+  // document is already ready, just execute code here
+  Init();
+} else {
+  document.addEventListener("DOMContentLoaded", function () {
+    // document was not ready, place code here"
+    Init();
+  });
+}
 // SearchBarView.addDoOnClick(GetNewCoords);
 
 // GetWeatherOnInit();
